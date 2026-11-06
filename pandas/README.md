@@ -1,12 +1,11 @@
 # PANDAS
 
 # SHORT DESCRIPTION
-Pandas is an open-source Python library used for data manipulation, analysis and cleaning. It provides fast and flexible tools to work with tabular data, similar to spreadsheets or SQL tables.
-
+    Pandas is an open-source Python library used for data manipulation, analysis and cleaning. It provides fast and flexible tools to work with tabular data, similar to spreadsheets or SQL tables.
     Pandas allows efficient handling and analysis of data in a few lines of code.
 
 # Installation
-pip install pandas
+    pip install pandas
 
 After the Pandas have been installed in the system we need to import the library. The Pandas library can be imported using:
     import pandas as pd
