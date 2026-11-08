@@ -35,3 +35,7 @@ print(sd[sd['total'] >= 130])
 group = sd.groupby("category")["sales"].sum()
 
 print("this mounth sales:\n ",group)
+
+pass_mark = sd[sd["tamil"] and sd["English"] >= 45]
+
+print("Passed sudens:",pass_mark) 
