@@ -44,6 +44,18 @@ y_pred = nb_model.predict(X_test_vector)
 accuracy = accuracy_score(y_test,y_pred)
 print(f"Accuracy score is : {accuracy*100:.2f}%")
 
+new_messages = [
+    "Congratulations! You won a free ticket.",
+    "Hey, are we still meeting today?"
+]
+
+new_vec = vectorizer.transform(new_messages)
+predictions = nb_model.predict(new_vec)
+
+for msg, pred in zip(new_messages, predictions):
+    label = "Spam" if pred == 1 else "Ham"
+    print(f"Message: '{msg}' => Prediction: {label}")
+
 cm = confusion_matrix(y_test,y_pred)
 sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
             xticklabels=["Ham","Spam"],
